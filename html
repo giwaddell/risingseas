@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rising Seas</title>
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+  <!-- Audio element -->
+  <audio id="background-audio" src="tsunami.mp3" loop></audio>
+
+  <!-- Audio toggle button -->
+  <button id="audio-toggle" aria-label="Toggle sound">🔇</button>
+
+  <!-- Landing Section -->
+  <section id="landing">
+    <div class="sky"></div>
+    <div class="sea"></div>
+    <div class="landing-content">
+      <h1>Rising Seas</h1>
+      <p>Experience the urgency</p>
+      <button id="scroll-btn">Scroll</button>
+    </div>
+  </section>
+
+  <!-- Interactive Bubbles -->
+  <section id="info">
+    <div class="bubble" id="bubble1">
+      <span class="bubble-title">What is happening?</span>
+      <div class="bubble-info">
+        Global temperatures are rising, leading to polar ice melt and higher sea levels, threatening coastlines and communities.
+      </div>
+    </div>
+    <div class="bubble" id="bubble2">
+      <span class="bubble-title">The Science</span>
+      <div class="bubble-info">
+        As global temperatures rise, the oceans absorb over 90% of the excess heat. When water heats up, its molecules move faster, causing the water to expand and take up more space. Due to this, thermal expansion has contributed roughly one-third of the observed sea-level rise since 1993. 
+      </div>
+    </div>
+  </section>
+
+  <!-- Carousel Section -->
+  <section id="devastation">
+    <div class="carousel">
+      <button class="carousel-btn prev" aria-label="Previous image">‹</button>
+      <div class="carousel-track">
+        <div class="slide"><img src="images/bench.jpg" alt="Bench flooded by rising sea levels"></div>
+        <div class="slide"><img src="images/housefloods.jpg" alt="Houses flooded due to climate change"></div>
+        <div class="slide"><img src="images/treefallen.jpg" alt="Tree fallen due to severe weather"></div>
+        <div class="slide"><img src="images/tiltedhouse.jpg" alt="Tilted house after flood damage"></div>
+      </div>
+      <button class="carousel-btn next" aria-label="Next image">›</button>
+    </div>
+  </section>
+
+  <!-- Interactive Demo -->
+  <section id="demo">
+    <h2>Will Your Hometown Be Underwater?</h2>
+    <p>Enter your town and see how sea levels change over the years.</p>
+
+    <div class="demo-input">
+      <input type="text" id="townInput" placeholder="E.g. Fremantle" />
+    </div>
+
+    <div class="year-toggle">
+      <label for="yearRange">Year: <span id="yearLabel">2025</span></label>
+      <input type="range" id="yearRange" min="2025" max="2100" step="5" value="2025" />
+    </div>
+
+    <div class="demo-visual">
+      <div class="demo-map">
+        <img src="images/fremantle.jpg" alt="Map view" class="demo-image" />
+        <div class="demo-land" id="townName">Fremantle</div>
+        <div class="demo-water"></div>
+      </div>
+    </div>
+    
+  </section>
+
+  <script src="script"></script>
+</body>
+</html>
